@@ -1,0 +1,214 @@
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+        margin: 0;
+    }
+
+    * {
+        font-size: 10px;
+        font-family: 'Poppins';
+    }
+
+    :root {
+        --red: hsl(0, 78%, 62%);
+        --cyan: hsl(180, 62%, 55%);
+        --orange: hsl(34, 97%, 64%);
+        --blue: hsl(212, 86%, 64%);
+        --very-dark-blue: hsl(234, 12%, 34%);
+        --grayish-blue: hsl(229, 6%, 66%);
+        --very-light-gray: hsl(0, 0%, 98%);
+    }
+
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLFj_Z1xlFQ.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+
+      .fourCard__bg {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-block: 3rem;
+        background-color: var(--very-light-gray);
+      }
+
+      .fourCard__cont {
+        max-width: 110rem;
+        height: 90rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-inline: 2rem;
+      }
+
+      .fourCard__h1 {
+        font-size: 3.6rem;
+        font-weight: 200;
+        color: var(--very-dark-blue);
+        width: 60rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .fourCard__h1--bold {
+        font-weight: 600;
+      }
+
+      .fourCard__p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: var(--grayish-blue);
+        text-align: center;
+        width: 54rem;
+        margin-top: 0;
+        line-height: 1.6;
+      }
+
+      .fourCard__box-cont {
+        width: 100%;
+        height: auto;
+        padding-bottom: 2rem;
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+      }
+
+      .fourCard__box {
+        width: 35rem;
+        height: 25rem;
+        padding-bottom: 1rem;
+        border-top: solid red 4px;
+        box-shadow: 0px 10px 10px 5px rgba(12, 84, 166, 0.1);
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        padding-inline: 3rem;
+        box-sizing: border-box;
+      }
+
+      .fourCard__h2 {
+        font-size: 2rem;
+        color: var(--very-dark-blue);
+        margin-bottom: 0;
+        padding-top: 1rem;
+      }
+
+      .fourCard__box-p {
+        font-size: 1.3rem;
+        color: var(--grayish-blue);
+      }
+
+      .fourCard__icon-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 3rem;
+      }
+
+      .fourCard__box-wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 3rem;
+      }
+
+      .fourCard__box--one {
+        border-color: var(--cyan);
+      }
+
+      .fourCard__box--two {
+        border-color: var(--red);
+      }
+
+      .fourCard__box--three {
+        border-color: var(--orange);
+      }
+
+      .fourCard__box--four {
+        border-color: var(--blue);
+      }
+
+      @media screen and (max-width: 1140px) {
+        .fourCard__box-wrap {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .fourCard__bg {
+            height: 100%;
+        }
+
+        .fourCard__box-cont {
+          flex-wrap: wrap;
+        }
+
+        .fourCard__cont {
+            height: auto;
+        }
+      }
+      
+      @media screen and (max-width: 775px) {
+        .fourCard__box-wrap {
+          flex-direction: column;
+        }
+
+        .fourCard__box-cont {
+          flex-direction: column;
+        }
+
+        .fourCard__h1 {
+          font-size: 2.8rem;
+          max-width: 36rem;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .fourCard__p {
+          width: 96%;
+        }
+      }
+
+      @media screen and (max-width: 389px) {
+        .fourCard__box {
+          width: 96%;
+        }
+
+        .fourCard__h1 {
+          font-size: 2.5rem;
+          width: 98%;
+        }
+      }
+
+      @media screen and (max-width: 349px) {
+        .fourCard__h1 {
+          font-size: 2.2rem;
+        }
+      }
