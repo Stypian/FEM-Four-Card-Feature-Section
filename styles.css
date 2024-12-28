@@ -160,6 +160,10 @@
         .fourCard__box-wrap {
             flex-direction: row;
             justify-content: center;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
         }
 
         .fourCard__bg {
@@ -167,7 +171,9 @@
         }
 
         .fourCard__box-cont {
-          flex-wrap: wrap;
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          grid-template-rows: repeat(2, auto);
         }
 
         .fourCard__cont {
@@ -178,15 +184,22 @@
       @media screen and (max-width: 775px) {
         .fourCard__box-wrap {
           flex-direction: column;
+          align-items: center;
+          width: 100%;
         }
 
         .fourCard__box-cont {
           flex-direction: column;
+          display: flex;
         }
 
         .fourCard__h1 {
           font-size: 2.8rem;
           max-width: 36rem;
+        }
+
+        .fourCard__box {
+          width: 94%;
         }
       }
 
@@ -197,9 +210,6 @@
       }
 
       @media screen and (max-width: 389px) {
-        .fourCard__box {
-          width: 96%;
-        }
 
         .fourCard__h1 {
           font-size: 2.5rem;
